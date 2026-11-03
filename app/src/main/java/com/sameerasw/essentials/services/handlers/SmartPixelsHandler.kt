@@ -144,7 +144,9 @@ class SmartPixelsHandler(
                             WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
                             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS or
                             WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS or
-                            WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
+                            WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED or
+                            @Suppress("DEPRECATION")
+                            WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED,
                         PixelFormat.TRANSLUCENT,
                     ).apply {
                         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
